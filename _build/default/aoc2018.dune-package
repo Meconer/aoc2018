@@ -1,0 +1,4 @@
+(lang dune 3.17)
+(name aoc2018)
+(sections (lib .) (bin ../../bin))
+(files (lib (META dune-package opam)) (bin (aoc2018)))

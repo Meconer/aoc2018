@@ -1,0 +1,1 @@
+let resultP1 = 0
