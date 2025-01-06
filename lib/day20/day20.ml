@@ -154,3 +154,6 @@ let solve_part2 =
 
   loop start_point (Set.singleton (module Int) (idx_of_pos start_point)) 0;
   Map.count !dist_map ~f:(fun dist -> dist >= 1000)
+
+let resultP1 = solve_part1
+let resultP2 = solve_part2

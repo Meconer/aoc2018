@@ -1,0 +1,5 @@
+(include_subdirs no)
+
+(library
+ (name day16)
+ (libraries core))
