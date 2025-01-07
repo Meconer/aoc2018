@@ -1,0 +1,34 @@
+ip_reg = 2
+
+0: r5 = 123
+r5 = r5 & 456       (1 1100 1000)
+if r5 = 72 then r5 = 1 else r5 = 0
+r2 = r2 + r5        (Hoppa till A om r5 var 72)
+r2=0 (hoppa till 0:)
+A: r5 = 0
+r3 = r5 | 65536     (1 0000 0000 0000 0000)
+r5 = 7586220        (0x0073 C1AC)
+L2: r1 = r3 & 255       (0xFF)
+r5 = r5 + r1
+r5 = r5 & 16777215  (0x00FF FFFF)
+r5 = r5 * 65899     (0x0001 016B)
+r5 = r5 & 16777215  (0x00FF FFFF)
+if 256 > r3 then r1 = 1 else r1 = 0
+r2 = r2 + r1        ( Hoppa till B om 256 > r3)
+r2 = r2 + 2         ( Hoppa till C)
+B: r2 = 27          ( Hoppa till G)
+C: r1 = 0
+L1: r4 = r1 + 1
+r4 = r4 * 256       
+if r4 > r3 then r4 = 1 else r4 = 0
+r2 = r2 + r4        ( Hoppa till D om r4 var > r3)
+r2 = r2 + 1         ( Hoppa till E)
+D: r2 = 25          ( Hoppa till F)
+E: r1 = r1 + 1
+r2 = 17             (Hoppa till L1:)
+F: r3 = r1
+r2 = 7              (Hoppa till L2:)
+G: if r5 = r0 then r1 = 1 else r1 = 0 
+r2 = r2 + r1        (Hoppa till H (avsluta) om r5 = r0 )
+r2 = 5              ( Hoppa till A)
+H: Utanför programmet
