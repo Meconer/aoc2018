@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/aoc2018/META"
-  "_build/install/default/lib/aoc2018/dune-package"
-  "_build/install/default/lib/aoc2018/opam"
-]
-bin: [
-  "_build/install/default/bin/aoc2018"
-]
